@@ -1,0 +1,75 @@
+/* =========================================
+   Element Selectors & Basic Setup
+   ========================================= */
+body {
+    font-family: Arial, sans-serif; /* Text and font properties */
+    background-color: #faf8f5;      /* Background colour */
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #2c1e16;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Navigation Bar Styling (Restyle this differently in media.css and register.css!) */
+nav {
+    background-color: #2c1e16;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline; /* Inline elements */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================================
+   ID Selectors
+   ========================================= */
+#hero-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #eaddcf;
+    border-bottom: 5px solid #d4a373; /* Borders */
+}
+
+/* =========================================
+   Class Selectors
+   ========================================= */
+.hero-image {
+    width: 80%;
+    max-width: 600px;
+    border: 3px solid #2c1e16;
+    border-radius: 10px;
+}
+
+.intro-content {
+    padding: 30px;
+    margin: 20px auto;
+    width: 70%;
+}
+
+.story-box {
+    background-color: #ffffff;
+    border: 2px dashed #d4a373;
+    padding: 20px;
+    text-align: center;
+}
