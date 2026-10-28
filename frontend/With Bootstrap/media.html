@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Bean | Menu & Ambiance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+
+    <!-- Shared Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">The Golden Bean</a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="media.html">Menu & Ambiance</a></li>
+                        <li class="nav-item"><a class="nav-link" href="register.html">Reservations</a></li>
+                        <!-- Part 2 Pages -->
+                        <li class="nav-item"><a class="nav-link" href="services.html">Our Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CSS background-image, height, and relative position -->
+    <section class="menu-banner">
+        <h1>Our Menu & Atmosphere</h1>
+    </section>
+
+    <main class="main-container container my-5">
+        <!-- float and overflow -->
+        <section class="info-section bg-white p-4 shadow-sm border rounded mb-5">
+            <h2>The Roasting Process</h2>
+
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=500&q=80" alt="Coffee Roasting" class="floated-image">
+            
+            <p>Our coffee goes through a rigorous selection and brewing process.</p>
+            
+            <!-- Ordered List -->
+            <h3>Brewing Steps:</h3>
+            <ol class="brewing-steps">
+                <li>Select single-origin beans.</li>
+                <li>Roast to perfection.</li>
+                <li>Grind immediately before brewing.</li>
+            </ol>
+
+            <!--Unordered List -->
+            <h3>Ambiance Features:</h3>
+            <ul class="features-list">
+                <li>Free High-Speed Wi-Fi</li>
+                <li>Cozy Vintage Seating</li>
+                <li>Ambient Background Music</li>
+            </ul>
+        </section>
+
+        <!--Data Table -->
+        <section class="table-section my-5">
+            <h2>Beverage Menu</h2>
+            <table class="menu-table table table-dark table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th>Drink Name</th>
+                        <th>Size</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Espresso</td>
+                        <td>Single</td>
+                        <td>$3.00</td>
+                    </tr>
+                    <tr>
+                        <!-- position relative (on the td) and absolute (on the badge) -->
+                        <td class="relative-cell custom-relative-cell">
+                            Cappuccino 
+                            <span class="badge custom-badge">Popular</span>
+                        </td>
+                        <td>Medium</td>
+                        <td>$4.50</td>
+                    </tr>
+                    <tr>
+                        <td>Iced Latte</td>
+                        <td>Large</td>
+                        <td>$5.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Video and Audio -->
+        <section class="media-section my-5">
+            <h2 class="text-center mb-4">Experience The Golden Bean</h2>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="media-block bg-white p-3 border-start border-4 border-dark shadow-sm h-100">
+                        <h3>Our Kitchen in Action</h3>
+                        <!-- Width and Height attributes applied directly to the video element -->
+                        <video class="w-100 mt-2 rounded" autoplay muted loop>
+                            <source src="kitchen-tour.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="media-block bg-white p-3 border-start border-4 border-dark shadow-sm h-100">
+                        <h3>Café Sounds</h3>
+                        <audio controls class="w-100 mt-4">
+                            <source src="relaxed-coffee-shop-ambience-sound.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-3 bg-light border-top">
+        <p class="mb-0">&copy; 2026 The Golden Bean Restaurant. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

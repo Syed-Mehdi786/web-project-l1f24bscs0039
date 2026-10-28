@@ -1,0 +1,58 @@
+/* Box Model */
+* {
+    box-sizing: border-box;
+}
+
+/* Float and Overflow */
+.custom-info-section {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: auto; /* Clears the floated image below */
+}
+
+.custom-float-img {
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Position */
+.custom-relative-cell {
+    position: relative;
+}
+
+.custom-badge {
+    position: absolute;
+    top: 8px;
+    left: 110px;
+    display: inline-block;
+    background-color: #dc3545;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.menu-banner {
+    background-image: url('restaurant-hero.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 300px; 
+    width: 100%;   
+    position: relative; 
+}
+
+.menu-banner h1 {
+    position: absolute; 
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent box behind text */
+    padding: 15px 25px;
+    font-weight: bold;
+}

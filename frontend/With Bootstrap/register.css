@@ -1,0 +1,34 @@
+/* Combinators (Child selector) */
+.booking-form > fieldset > legend {
+    color: #d4a373;
+    font-weight: bold;
+}
+
+/* Attribute Selectors & Pseudo-classes */
+input[type="text"]:focus,
+input[type="email"]:focus {
+    /* Overrides Bootstrap's default focus ring slightly to prove custom CSS usage */
+    border-color: #d4a373 !important; 
+    box-shadow: 0 0 5px rgba(212, 163, 115, 0.5) !important;
+}
+
+/* Pseudo-classes :valid and :invalid */
+input[type="email"]:focus:invalid {
+    border-color: red !important;
+}
+
+input[type="email"]:focus:valid {
+    border-color: green !important;
+}
+
+/* Pseudo-class :hover */
+.custom-submit-btn:hover {
+    background-color: #d4a373 !important;
+    border-color: #d4a373 !important;
+}
+
+/* Pseudo-elements ::after */
+.custom-req-label::after {
+    content: " *";
+    color: red;
+}
