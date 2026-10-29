@@ -1,0 +1,219 @@
+/* ==========================================================================
+   PAGE 2: media.css (The Golden Bean - Menu & Ambiance)
+   Practising: Box model (width, height, margin, padding, box-sizing);
+   background-image; display; position; float; overflow
+   ========================================================================== */
+
+/* 1. BOX MODEL (Universal border-box) */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f6f2ed;
+    color: #2b2118;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    color: #3b2314;
+}
+
+/* 2. UNIQUE NAVBAR FOR PAGE 2 (Warm Cream & Caramel Pill Navigation) */
+.media-custom-navbar {
+    background-color: #fffdf9;
+    border-bottom: 3px solid #b07d4b;
+    padding: 14px 0;
+    box-shadow: 0 3px 12px rgba(59, 35, 20, 0.08);
+}
+
+.media-custom-navbar .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    color: #3b2314;
+    font-size: 1.45rem;
+}
+
+.media-custom-navbar .nav-link {
+    display: inline-block;
+    color: #5c4033;
+    padding: 7px 16px;
+    margin: 0 4px;
+    border-radius: 25px;
+    font-weight: 700;
+}
+
+.media-custom-navbar .nav-link.active,
+.media-custom-navbar .nav-link:hover {
+    background-color: #b07d4b;
+    color: #ffffff;
+}
+
+/* 3. BACKGROUND-IMAGE, WIDTH, HEIGHT & POSITION (Relative + Absolute) */
+.menu-banner {
+    background-image: linear-gradient(rgba(28, 17, 10, 0.45), rgba(28, 17, 10, 0.65)),
+                      url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 310px;
+    width: 100%;
+    position: relative;
+    border-bottom: 4px solid #d4a373;
+}
+
+.menu-banner h1 {
+    position: absolute;
+    bottom: 24px;
+    left: 40px;
+    color: #ffffff;
+    margin: 0;
+    background-color: rgba(31, 20, 14, 0.82);
+    padding: 16px 28px;
+    border-left: 5px solid #d4a373;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.banner-tag-badge {
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    background-color: #d4a373;
+    color: #1f140e;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+/* 4. FLOAT, CLEAR & OVERFLOW */
+.custom-info-section {
+    background-color: #ffffff;
+    width: 100%;
+    height: 410px;
+    padding: 26px;
+    margin: 0;
+    border: 1px solid #e6ccb2;
+    border-radius: 12px;
+    overflow: auto; /* Clears floated image and keeps height tidy */
+}
+
+.custom-float-img {
+    float: left;
+    width: 220px;
+    height: 165px;
+    object-fit: cover;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 3px solid #d4a373;
+}
+
+.clear-both-heading {
+    clear: both;
+    padding-top: 8px;
+}
+
+.feature-chip {
+    display: inline-block;
+    background-color: #faedcd;
+    color: #3b2314;
+    padding: 4px 12px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* 5. OVERFLOW SCROLLABLE LOG BOX */
+.roaster-log-scrollbox {
+    background-color: #2b1d14;
+    color: #faedcd;
+    width: 100%;
+    height: 410px;
+    padding: 26px;
+    border-radius: 12px;
+    border: 3px solid #d4a373;
+    overflow-y: auto;
+}
+
+.roaster-log-scrollbox h3 {
+    color: #d4a373;
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+}
+
+/* 6. TABLE CELL RELATIVE/ABSOLUTE BADGES */
+.custom-relative-cell {
+    position: relative;
+    padding-right: 110px;
+}
+
+.custom-badge {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    display: inline-block;
+    background-color: #dc3545;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.chef-choice-badge {
+    background-color: #d4a373;
+    color: #1f140e;
+}
+
+/* 7. MEDIA CARDS & FIXED ACTION BADGE */
+.media-card {
+    background-color: #ffffff;
+    padding: 26px;
+    border-left: 5px solid #b07d4b;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.media-player-box {
+    height: 250px;
+    background-color: #000000;
+    object-fit: cover;
+}
+
+.acoustic-schedule-box {
+    background-color: #faedcd;
+    border-left: 4px solid #3b2314;
+    border-radius: 6px;
+    color: #3b2314;
+}
+
+.fixed-reserve-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: block;
+    background-color: #3b2314;
+    color: #faedcd;
+    border: 2px solid #d4a373;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    z-index: 1050;
+}
+
+.fixed-reserve-btn:hover {
+    background-color: #d4a373;
+    color: #1f140e;
+}
+
+.media-footer {
+    background-color: #2b1d14;
+    color: #e6ccb2;
+}

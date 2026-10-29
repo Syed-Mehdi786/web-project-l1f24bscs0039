@@ -1,0 +1,183 @@
+/* ==========================================================================
+   PAGE 3: register.css (The Golden Bean - Reservations)
+   Practising: Attribute selectors; Combinators (child, descendant, adjacent
+   sibling, general sibling); Pseudo-classes (:hover, :focus, :valid, :invalid);
+   Pseudo-elements (::before, ::after, ::placeholder)
+   ========================================================================== */
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(150deg, #faf8f5 0%, #f3eae0 100%);
+    color: #2b2118;
+}
+
+h1, legend {
+    font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+/* 1. UNIQUE NAVBAR FOR PAGE 3 (Rich Espresso-to-Gold Gradient Navbar) */
+.register-gradient-navbar {
+    background: linear-gradient(90deg, #2b1d14 0%, #6f4e37 55%, #b07d4b 100%);
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(43, 29, 20, 0.25);
+}
+
+.register-gradient-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.88);
+    font-weight: 700;
+    margin-left: 12px;
+    border-bottom: 2px solid transparent;
+}
+
+.register-gradient-navbar .nav-link.active,
+.register-gradient-navbar .nav-link:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #faedcd;
+}
+
+/* 2. COMBINATORS
+   - Child combinator (>): .booking-form > fieldset > legend
+   - Descendant combinator (space): .booking-form fieldset
+   - Adjacent sibling combinator (+): legend + p.fieldset-note
+   - General sibling combinator (~): legend ~ .row
+*/
+.booking-form {
+    background-color: #ffffff;
+    border: 1px solid #e6ccb2;
+    box-shadow: 0 12px 32px rgba(43, 29, 20, 0.1);
+}
+
+/* Descendant Combinator */
+.booking-form fieldset {
+    background-color: #fdfbf9;
+    padding: 22px;
+    border-radius: 10px;
+    border: 1px solid #ede0d4;
+}
+
+/* Child Combinator (>) */
+.booking-form > fieldset > legend {
+    color: #b07d4b;
+    font-weight: 700;
+    font-size: 1.35rem;
+}
+
+/* Adjacent Sibling Combinator (+) */
+legend + p.fieldset-note {
+    color: #6f4e37;
+    font-style: italic;
+    font-size: 0.92rem;
+    margin-top: -4px;
+    margin-bottom: 16px;
+}
+
+/* General Sibling Combinator (~) */
+legend ~ .row {
+    padding-top: 4px;
+}
+
+/* 3. ATTRIBUTE SELECTORS */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea[name="specialReq"],
+select[id="occasion"] {
+    border: 2px solid #decbb7;
+    border-radius: 8px;
+}
+
+input[readonly] {
+    background-color: #faedcd;
+    color: #3b2314;
+    border-style: dashed;
+    font-weight: 700;
+}
+
+input[disabled] {
+    background-color: #e9ecef;
+    color: #6c757d;
+    border-color: #ced4da;
+    cursor: not-allowed;
+}
+
+input[type="file"] {
+    border: 2px dotted #b07d4b;
+    background-color: #fffdf9;
+}
+
+/* 4. PSEUDO-CLASSES (:focus, :valid, :invalid, :hover) */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #d4a373;
+    box-shadow: 0 0 6px rgba(212, 163, 115, 0.55);
+    outline: none;
+}
+
+input[required]:valid,
+textarea[required]:valid {
+    border-left: 6px solid #198754;
+}
+
+input[required]:invalid,
+textarea[required]:invalid {
+    border-left: 6px solid #d97706;
+}
+
+input[type="email"]:focus:invalid {
+    border-color: #dc3545;
+}
+
+input[type="email"]:focus:valid {
+    border-color: #198754;
+}
+
+.custom-submit-btn {
+    background-color: #2b1d14;
+    border: 2px solid #2b1d14;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.custom-submit-btn:hover {
+    background-color: #d4a373;
+    border-color: #d4a373;
+    color: #1f140e;
+}
+
+/* 5. PSEUDO-ELEMENTS (::before, ::after, ::placeholder) */
+.reservation-title::before {
+    content: "☕ ";
+}
+
+.custom-req-label::after {
+    content: " *";
+    color: #dc3545;
+    font-weight: 700;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9c8978;
+    font-style: italic;
+}
+
+.terms-box {
+    background-color: #faedcd;
+    border: 1px solid #d4a373;
+}
+
+.reg-footer {
+    background-color: #1f140e;
+    color: #d4a373;
+}

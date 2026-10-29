@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Bean | Menu &amp; Ambiance</title>
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Page 2 Custom CSS -->
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+
+    <!-- Navigation Bar (Restyled uniquely in media.css: Warm Caramel/Slate Pill Navbar) -->
+    <header>
+        <nav class="navbar navbar-expand-lg media-custom-navbar">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">The Golden Bean</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mediaNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mediaNavbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="media.html">Menu &amp; Ambiance</a></li>
+                        <li class="nav-item"><a class="nav-link" href="register.html">Reservations</a></li>
+                        <!-- Part 2 Pages -->
+                        <li class="nav-item"><a class="nav-link" href="services.html">Our Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CSS background-image, height, width, and relative/absolute positioning -->
+    <section class="menu-banner">
+        <div class="container">
+            <h1>Our Menu &amp; Atmosphere</h1>
+            <span class="banner-tag-badge">Freshly Roasted Daily &bull; 100% Arabica</span>
+        </div>
+    </section>
+
+    <main class="main-container container my-5">
+        <!-- Row combining Float + Clear + Overflow Scrollable Tasting Notes -->
+        <div class="row g-4 mb-5">
+            <div class="col-lg-7">
+                <!-- Float and Overflow (Matching class .custom-info-section and .custom-float-img) -->
+                <section class="custom-info-section shadow-sm">
+                    <h2>The Signature Roasting Process</h2>
+                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=500&q=80" 
+                         alt="Coffee Roasting" 
+                         class="custom-float-img">
+                    <p>
+                        At <strong>The Golden Bean</strong>, our coffee goes through a rigorous selection, drum-roasting, and precision brewing process. Every harvest is cupped by our head roastmaster to verify sweetness, body, and clean acidity.
+                    </p>
+
+                    <!-- Ordered List (<ol>) -->
+                    <h3 class="h5 mt-3">Master Brewing Steps:</h3>
+                    <ol class="brewing-steps">
+                        <li>Select high-altitude single-origin green Arabica beans.</li>
+                        <li>Roast in small batches at 205&deg;C to unlock caramel aromatics.</li>
+                        <li>Rest beans for 48 hours and grind immediately before extraction.</li>
+                        <li>Brew with remineralized water at 93&deg;C for balanced crema.</li>
+                    </ol>
+
+                    <!-- Unordered List (<ul>) -->
+                    <h3 class="h5 mt-3 clear-both-heading">Café Ambiance &amp; Guest Perks:</h3>
+                    <ul class="features-list mb-0">
+                        <li><span class="feature-chip">Free High-Speed Fiber Wi-Fi</span></li>
+                        <li><span class="feature-chip">Cozy Vintage Velvet &amp; Oak Seating</span></li>
+                        <li><span class="feature-chip">Curated Acoustic Jazz Background Music</span></li>
+                        <li><span class="feature-chip">Power Outlets at Every Booth</span></li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Explicit Box Model + Overflow Scrollable Container -->
+            <div class="col-lg-5">
+                <aside class="roaster-log-scrollbox shadow-sm">
+                    <h3>Roastmaster's Harvest Log (Scrollable)</h3>
+                    <p><strong>Batch #GB-2026-10 (October Reserve):</strong></p>
+                    <p><strong>1. Ethiopian Yirgacheffe (Washed):</strong> Floral jasmine aroma with bright bergamot, white peach, and honeyed lemon finish. Ideal for V60 Pour-Over.</p>
+                    <p><strong>2. Colombian Supremo Huila:</strong> Medium-dark roast featuring toasted hazelnut, dark cocoa nibs, and brown sugar sweetness. Our signature house espresso base.</p>
+                    <p><strong>3. Guatemalan Antigua Reserve:</strong> Velvety full body with notes of baked spiced apple, dulce de leche, and roasted almond.</p>
+                    <p><strong>4. Sumatra Mandheling Organic:</strong> Earthy, low-acid profile with rich dark chocolate and cedar spice notes—perfect for French Press and Cold Brew.</p>
+                    <p><strong>5. House Decaf Swiss Water Process:</strong> 99.9% caffeine-free without chemical solvents, preserving sweet malt and milk chocolate notes.</p>
+                </aside>
+            </div>
+        </div>
+
+        <!-- Data Table with Relative/Absolute Positioned Badges -->
+        <section class="table-section my-5">
+            <h2 class="mb-3">Signature Beverage &amp; Artisan Pastry Menu</h2>
+            <div class="table-responsive">
+                <table class="menu-table table table-dark table-striped table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Category</th>
+                            <th>Serving Size</th>
+                            <th>Tasting Notes</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Double Espresso Macchiato</td>
+                            <td>Hot Espresso</td>
+                            <td>Single / Double (60ml)</td>
+                            <td>Intense dark cocoa &amp; velvety micro-foam</td>
+                            <td>$3.50</td>
+                        </tr>
+                        <tr>
+                            <!-- position: relative (on td) and position: absolute (on badge) -->
+                            <td class="custom-relative-cell">
+                                Artisan Velvet Cappuccino
+                                <span class="custom-badge">Popular</span>
+                            </td>
+                            <td>Hot Milk Coffee</td>
+                            <td>Medium (240ml)</td>
+                            <td>Silky steamed organic milk &amp; cinnamon dusting</td>
+                            <td>$4.50</td>
+                        </tr>
+                        <tr>
+                            <td class="custom-relative-cell">
+                                Salted Caramel Iced Latte
+                                <span class="custom-badge chef-choice-badge">Barista Pick</span>
+                            </td>
+                            <td>Cold Specialty</td>
+                            <td>Large (360ml)</td>
+                            <td>House-made Madagascar vanilla &amp; sea-salt caramel</td>
+                            <td>$5.25</td>
+                        </tr>
+                        <tr>
+                            <td>Ethiopian V60 Hand Pour-Over</td>
+                            <td>Manual Brew</td>
+                            <td>Carafe (300ml)</td>
+                            <td>Floral bergamot, citrus blossom &amp; tea-like body</td>
+                            <td>$5.75</td>
+                        </tr>
+                        <tr>
+                            <td>Warm Almond Croissant &amp; Berries</td>
+                            <td>Bakery Atelier</td>
+                            <td>1 Piece (Fresh Baked)</td>
+                            <td>Flaky French butter pastry &amp; toasted frangipane</td>
+                            <td>$4.80</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Video and Audio Section -->
+        <section class="media-section my-5">
+            <h2 class="text-center mb-4">Experience The Golden Bean Sights &amp; Sounds</h2>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="media-card h-100">
+                        <h3>Our Roastery &amp; Kitchen in Action</h3>
+                        <p class="text-muted">Watch how our baristas and chefs prepare morning service:</p>
+                        <!-- Working HTML5 Video with controls -->
+                        <video class="w-100 mt-2 rounded media-player-box" controls autoplay muted loop>
+                            <source src="kitchen-tour.mp4" type="video/mp4">
+                            Your browser does not support the HTML5 video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="media-card h-100">
+                        <h3>Relaxed Café Acoustic Ambience</h3>
+                        <p class="text-muted">Preview our soothing instrumental lounge playlist and espresso bar sounds:</p>
+                        <!-- Working HTML5 Audio with controls -->
+                        <audio controls class="w-100 mt-4">
+                            <source src="relaxed-coffee-shop-ambience-sound.mp3" type="audio/mp3">
+                            Your browser does not support the HTML5 audio element.
+                        </audio>
+                        <div class="mt-4 p-3 acoustic-schedule-box">
+                            <strong>Live Unplugged Acoustic Nights:</strong> Every Friday &amp; Saturday from 7:30 PM to 10:30 PM on our heated indoor-outdoor patio.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fixed Position Quick Reservation Button -->
+    <a href="register.html" class="fixed-reserve-btn">Reserve Table &rarr;</a>
+
+    <footer class="media-footer text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 The Golden Bean Restaurant &amp; Roastery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

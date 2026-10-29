@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Bean | Table &amp; Event Reservations</title>
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Page 3 Custom CSS -->
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <!-- Navigation Bar (Restyled uniquely in register.css: Warm Gold-to-Roast Gradient Bar) -->
+    <nav class="navbar navbar-expand-lg register-gradient-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white" href="index.html">The Golden Bean</a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#regNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="regNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="media.html">Menu &amp; Ambiance</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="register.html">Reservations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5 custom-form-wrapper">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <header class="text-center mb-4">
+                    <h1 class="reservation-title">Book a Table or Private Tasting Event</h1>
+                    <p class="lead-subtitle">Fill out the reservation form below to secure your table at The Golden Bean.</p>
+                </header>
+
+                <!-- Complete Form with all 14 input types and all 9 validation attributes -->
+                <form action="#" method="post" class="booking-form p-4 p-md-5 rounded">
+
+                    <!-- Fieldset 1: text, email, password, url + required, minlength, maxlength -->
+                    <fieldset class="mb-4">
+                        <legend class="border-bottom pb-2">1. Guest &amp; VIP Credentials</legend>
+                        <p class="fieldset-note">Fields marked with a red asterisk are required to confirm your booking.</p>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="fullName" class="form-label custom-req-label">Full Name:</label>
+                                <input type="text" class="form-control" id="fullName" name="fullName" 
+                                       required minlength="3" maxlength="50" placeholder="e.g., John Doe">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="emailAddr" class="form-label custom-req-label">Email Address:</label>
+                                <input type="email" class="form-control" id="emailAddr" name="emailAddr" 
+                                       required placeholder="john@example.com">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="vipCode" class="form-label custom-req-label">Create Booking PIN / VIP Access Code:</label>
+                                <input type="password" class="form-control" id="vipCode" name="vipCode" 
+                                       required minlength="4" maxlength="8" placeholder="4 to 8 character PIN">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="socialUrl" class="form-label">Your Website / Instagram Profile Link:</label>
+                                <input type="url" class="form-control" id="socialUrl" name="socialUrl" 
+                                       placeholder="https://instagram.com/yourprofile">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Fieldset 2: date, time, number, select, radio + min, max, required, selected, checked -->
+                    <fieldset class="mb-4">
+                        <legend class="border-bottom pb-2">2. Reservation Schedule &amp; Seating</legend>
+                        <p class="fieldset-note">Choose your preferred dining date, time slot, party size, and atmosphere.</p>
+
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label for="resDate" class="form-label custom-req-label">Reservation Date:</label>
+                                <input type="date" class="form-control" id="resDate" name="resDate" 
+                                       min="2026-10-29" max="2027-12-31" required>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="resTime" class="form-label custom-req-label">Arrival Time:</label>
+                                <input type="time" class="form-control" id="resTime" name="resTime" 
+                                       min="07:00" max="22:30" value="19:00" required>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="guests" class="form-label custom-req-label">Number of Guests (1–20):</label>
+                                <input type="number" class="form-control" id="guests" name="guests" 
+                                       min="1" max="20" value="2" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="occasion" class="form-label">Dining Occasion:</label>
+                                <select class="form-select" id="occasion" name="occasion">
+                                    <option value="casual">Casual Coffee &amp; Brunch</option>
+                                    <option value="birthday" selected>Birthday Celebration</option>
+                                    <option value="anniversary">Romantic Anniversary</option>
+                                    <option value="business">Executive Business Meeting</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label d-block">Seating Preference:</label>
+                                <div class="form-check form-check-inline mt-1">
+                                    <input class="form-check-input" type="radio" name="seating" id="indoor" value="indoor" checked>
+                                    <label class="form-check-label" for="indoor">Indoor Roastery Lounge</label>
+                                </div>
+                                <div class="form-check form-check-inline mt-1">
+                                    <input class="form-check-input" type="radio" name="seating" id="outdoor" value="outdoor">
+                                    <label class="form-check-label" for="outdoor">Garden Patio</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Fieldset 3: range, color, file, disabled, readonly, textarea, checkbox -->
+                    <fieldset class="mb-4">
+                        <legend class="border-bottom pb-2">3. Event Customizations &amp; Dietary Notes</legend>
+                        <p class="fieldset-note">Personalize table linens, tasting menus, and dietary accommodations.</p>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="budget" class="form-label">Estimated Budget Per Guest ($15 &ndash; $100):</label>
+                                <input type="range" class="form-range" id="budget" name="budget" 
+                                       min="15" max="100" step="5" value="45">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="themeColor" class="form-label">Custom Table Napkin / Floral Theme Color:</label>
+                                <input type="color" class="form-control form-control-color w-100" id="themeColor" 
+                                       name="themeColor" value="#d4a373">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="menuFile" class="form-label">Upload Event Menu / Guest List:</label>
+                                <input type="file" class="form-control" id="menuFile" name="menuFile" accept=".pdf,image/*">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="refFile" class="form-label">Floorplan Override (Disabled):</label>
+                                <input type="text" class="form-control" id="refFile" name="refFile" 
+                                       value="VIP Lounge Locked" disabled>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="sysStatus" class="form-label">System Booking Status (Readonly):</label>
+                                <input type="text" class="form-control" id="sysStatus" name="sysStatus" 
+                                       value="Instant Confirmation Active" readonly>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="specialReq" class="form-label custom-req-label">Special Requests (Allergies, High-Chair, Cake Inscription):</label>
+                                <textarea class="form-control" id="specialReq" name="specialReq" rows="3" 
+                                          minlength="5" maxlength="250" required 
+                                          placeholder="Let our chef know about nut/gluten allergies or celebration notes (5–250 chars)..."></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Checkboxes with checked and required -->
+                    <div class="mb-4 p-3 terms-box rounded">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="coffeeClub" name="coffeeClub" value="yes" checked>
+                            <label class="form-check-label" for="coffeeClub">
+                                Send me a complimentary welcome Espresso voucher via email.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input custom-checkbox" type="checkbox" id="terms" name="terms" required>
+                            <label class="form-check-label custom-req-label" for="terms">
+                                I agree to The Golden Bean's 15-minute table hold policy and terms of service.
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3">
+                        <button type="reset" class="btn btn-outline-secondary w-25 py-2 fs-6">Clear Form</button>
+                        <button type="submit" class="btn btn-dark w-75 py-2 custom-submit-btn fs-5">Confirm Reservation</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="reg-footer text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 The Golden Bean Restaurant &amp; Roastery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
