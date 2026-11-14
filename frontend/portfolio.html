@@ -3,9 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>The Golden Bean | Visual Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
 </head>
-<body>
-    
+<body class="text-light">
+
+    <!-- Unique Navbar for Page 5 -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark portfolio-custom-navbar py-3">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">The Golden Bean</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="portfolioNav">
+                    <ul class="navbar-nav ms-auto gap-1">
+                        <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="media.html">Menu &amp; Ambiance</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="register.html">Reservations</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="services.html">Our Services</a></li>
+                        <li class="nav-item"><a class="nav-link active px-3" href="portfolio.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Animated Hero practising @keyframes -->
+    <section class="portfolio-hero text-center py-5 border-bottom border-secondary">
+        <div class="container">
+            <span class="floating-coffee-badge d-inline-block px-3 py-1 rounded-pill small mb-2">☕ Curated Craft</span>
+            <h1 class="display-5 fw-bold">Roastery &amp; Culinary Gallery</h1>
+            <p class="lead mb-0 text-secondary">Showcasing CSS Grid layouts, keyframe animations, and responsive breakpoints.</p>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <!-- Grid 1: grid-template-areas -->
+        <section class="mb-5">
+            <h2 class="h4 text-warning mb-3">1. Signature Roastery Highlights (grid-template-areas)</h2>
+            <div class="featured-mosaic-grid">
+                <figure class="gallery-figure area-roast">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80" alt="Main Roastery Hall">
+                    <figcaption>
+                        <h3 class="h5 mb-1">Main Roastery Sanctuary</h3>
+                        <p class="small mb-0">Warm Edison lighting and freshly ground single-origin Arabica.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-figure area-latte">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80" alt="Latte Art">
+                    <figcaption><h3 class="h6 mb-0">Championship Rosetta Pour</h3></figcaption>
+                </figure>
+
+                <figure class="gallery-figure area-pastry">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Artisan Pastries">
+                    <figcaption><h3 class="h6 mb-0">Dawn Bakery Atelier</h3></figcaption>
+                </figure>
+
+                <figure class="gallery-figure area-pourover">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" alt="V60 Slow Bar">
+                    <figcaption><h3 class="h6 mb-0">Hario V60 Manual Brew Bar</h3></figcaption>
+                </figure>
+
+                <figure class="gallery-figure area-patio">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Garden Patio">
+                    <figcaption><h3 class="h6 mb-0">Botanical Acoustic Patio</h3></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Grid 2: repeat(auto-fit, minmax()) -->
+        <section>
+            <h2 class="h4 text-warning mb-3">2. Seasonal Plates (auto-fit Responsive Grid)</h2>
+            <div class="autofit-caption-grid">
+                <figure class="gallery-figure">
+                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80" alt="Avocado Tartine">
+                    <figcaption><h3 class="h6 mb-0">Avocado &amp; Poached Egg Tartine</h3></figcaption>
+                </figure>
+                <figure class="gallery-figure">
+                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=80" alt="Nitro Cold Brew">
+                    <figcaption><h3 class="h6 mb-0">Cascading Nitro Cold Brew</h3></figcaption>
+                </figure>
+                <figure class="gallery-figure">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80" alt="Espresso Torte">
+                    <figcaption><h3 class="h6 mb-0">70% Valrhona Espresso Torte</h3></figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-warning text-center py-4 mt-5 border-top border-secondary">
+        <p class="mb-0">&copy; 2026 The Golden Bean Restaurant &amp; Roastery. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
