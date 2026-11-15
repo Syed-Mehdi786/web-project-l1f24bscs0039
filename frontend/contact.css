@@ -1,0 +1,95 @@
+/* ==========================================================================
+   PAGE 6: contact.css (About & Contact Us)
+   Practising: Responsive layout mixing Flexbox and CSS Grid; media queries
+   ========================================================================== */
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #fbf7f2;
+    color: #2b2118;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #4a2511;
+}
+
+/* 1. UNIQUE NAVBAR FOR PAGE 6 (Warm Terracotta Bar) */
+.contact-custom-navbar {
+    background-color: #5c2c16;
+    border-bottom: 4px solid #e6ccb2;
+}
+
+.contact-custom-navbar .nav-link {
+    color: #faedcd;
+}
+
+.contact-custom-navbar .nav-link.active,
+.contact-custom-navbar .nav-link:hover {
+    background-color: #faedcd;
+    color: #5c2c16;
+    border-radius: 6px;
+}
+
+/* 2. FLEXBOX ABOUT SECTION */
+.about-flexbox-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 28px;
+    background-color: #ffffff;
+}
+
+.about-text-column { flex: 1 1 420px; }
+.about-image-column { flex: 1 1 320px; }
+.about-image-column img { height: 280px; object-fit: cover; }
+
+/* 3. CSS GRID + FLEXBOX MIXED CONTACT LAYOUT */
+.contact-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 24px;
+}
+
+.contact-info-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-card, .contact-form-panel {
+    background-color: #ffffff;
+}
+
+/* 4. DARK ROAST MODE (Toggled by contact.js) */
+body.dark-roast-theme {
+    background-color: #16120f;
+    color: #f3eae0;
+}
+
+body.dark-roast-theme .about-flexbox-section,
+body.dark-roast-theme .info-card,
+body.dark-roast-theme .contact-form-panel {
+    background-color: #241c17;
+    color: #f3eae0;
+}
+
+body.dark-roast-theme h1,
+body.dark-roast-theme h2,
+body.dark-roast-theme h3 {
+    color: #faedcd;
+}
+
+/* 5. MEDIA QUERIES */
+@media (max-width: 992px) {
+    .contact-grid-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-image-column img {
+        height: 200px;
+    }
+}
