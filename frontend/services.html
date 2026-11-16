@@ -3,9 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>The Golden Bean | Services &amp; Delivery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="services.css">
 </head>
 <body>
-    
+
+    <!-- Unique Navbar for Page 4 -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark services-custom-navbar sticky-top py-3">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">The Golden Bean</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#servicesNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="servicesNav">
+                    <ul class="navbar-nav ms-auto gap-1">
+                        <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="media.html">Menu &amp; Ambiance</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="register.html">Reservations</a></li>
+                        <li class="nav-item"><a class="nav-link active px-3" href="services.html">Our Services</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="portfolio.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="services-hero text-center text-white py-5">
+        <div class="container">
+            <h1 class="display-5 fw-bold text-white">Our Services &amp; Online Delivery</h1>
+            <p class="lead mb-0">Artisan catering, roasting subscriptions, and express doorstep delivery.</p>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <!-- PART A: Rubric Required Flexbox Card List (Image, Heading, Text, Link) -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Signature Hospitality Services</h2>
+
+            <div class="services-flex-container">
+                <article class="service-card card border-0 shadow-sm overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Corporate Catering">
+                    <div class="card-body d-flex flex-column p-4">
+                        <h3 class="h5 fw-bold">Mobile Espresso Catering</h3>
+                        <p class="text-muted flex-grow-1">Certified baristas and espresso bars for conferences, weddings, and private events.</p>
+                        <a href="register.html" class="fw-bold text-success text-decoration-none">Book Catering &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="service-card card border-0 shadow-sm overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Bean Subscription">
+                    <div class="card-body d-flex flex-column p-4">
+                        <h3 class="h5 fw-bold">Weekly Bean Subscriptions</h3>
+                        <p class="text-muted flex-grow-1">Freshly roasted single-origin Arabica whole beans delivered to your door every Monday.</p>
+                        <a href="#delivery-section" class="fw-bold text-success text-decoration-none">Order Beans Below &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="service-card card border-0 shadow-sm overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507914372368-b2b085b925a1?auto=format&fit=crop&w=600&q=80" alt="Barista Masterclass">
+                    <div class="card-body d-flex flex-column p-4">
+                        <h3 class="h5 fw-bold">Barista &amp; Latte Art Class</h3>
+                        <p class="text-muted flex-grow-1">Weekend hands-on workshops covering espresso extraction and milk micro-foam art.</p>
+                        <a href="register.html" class="fw-bold text-success text-decoration-none">Reserve Seat &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PART B: Online Delivery Menu & Cart (Bootstrap Grid + Flexbox) -->
+        <section id="delivery-section" class="pt-3">
+            <h2 class="text-center mb-4">Express Delivery Menu &amp; Cart</h2>
+
+            <div class="row g-4">
+                <!-- Menu Items (Left 8 Cols) -->
+                <div class="col-lg-8">
+                    <div class="services-flex-container">
+                        <div class="service-card card border-0 shadow-sm overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=500&q=80" alt="Velvet Cappuccino">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h4 class="h6 fw-bold mb-0">Velvet Cappuccino</h4>
+                                    <span class="badge bg-warning text-dark">$4.50</span>
+                                </div>
+                                <div class="d-flex gap-2 mt-3">
+                                    <input type="number" id="qty-1" class="form-control form-control-sm w-25 text-center" value="1" min="1" max="10">
+                                    <button type="button" class="btn btn-dark btn-sm w-75" onclick="addToCart('Velvet Cappuccino', 4.50, 'qty-1')">+ Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="service-card card border-0 shadow-sm overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=80" alt="Caramel Iced Latte">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h4 class="h6 fw-bold mb-0">Caramel Iced Latte</h4>
+                                    <span class="badge bg-warning text-dark">$5.25</span>
+                                </div>
+                                <div class="d-flex gap-2 mt-3">
+                                    <input type="number" id="qty-2" class="form-control form-control-sm w-25 text-center" value="1" min="1" max="10">
+                                    <button type="button" class="btn btn-dark btn-sm w-75" onclick="addToCart('Caramel Iced Latte', 5.25, 'qty-2')">+ Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="service-card card border-0 shadow-sm overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80" alt="Almond Croissant">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h4 class="h6 fw-bold mb-0">Almond Croissant</h4>
+                                    <span class="badge bg-warning text-dark">$4.80</span>
+                                </div>
+                                <div class="d-flex gap-2 mt-3">
+                                    <input type="number" id="qty-3" class="form-control form-control-sm w-25 text-center" value="1" min="1" max="10">
+                                    <button type="button" class="btn btn-dark btn-sm w-75" onclick="addToCart('Almond Croissant', 4.80, 'qty-3')">+ Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="service-card card border-0 shadow-sm overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=500&q=80" alt="Ethiopian Beans">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h4 class="h6 fw-bold mb-0">Yirgacheffe Beans</h4>
+                                    <span class="badge bg-warning text-dark">$14.00</span>
+                                </div>
+                                <div class="d-flex gap-2 mt-3">
+                                    <input type="number" id="qty-4" class="form-control form-control-sm w-25 text-center" value="1" min="1" max="10">
+                                    <button type="button" class="btn btn-dark btn-sm w-75" onclick="addToCart('Yirgacheffe Beans', 14.00, 'qty-4')">+ Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Cart & Checkout (Right 4 Cols) -->
+                <div class="col-lg-4">
+                    <aside class="card border-0 shadow-sm p-4">
+                        <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
+                            <h3 class="h5 mb-0">🛒 Delivery Cart</h3>
+                            <span id="cart-badge" class="badge bg-success">0 items</span>
+                        </div>
+
+                        <ul id="cart-list" class="list-group list-group-flush mb-3 small">
+                            <li class="list-group-item text-muted text-center">Cart is empty</li>
+                        </ul>
+
+                        <div class="d-flex justify-content-between fw-bold fs-5 border-top pt-2 mb-3">
+                            <span>Total (incl. $2.50 delivery):</span>
+                            <span id="cart-total" class="text-success">$0.00</span>
+                        </div>
+
+                        <form id="checkout-form" onsubmit="placeOrder(event)">
+                            <input type="text" id="custName" class="form-control form-control-sm mb-2" required placeholder="Your Name *">
+                            <input type="text" id="custAddr" class="form-control form-control-sm mb-3" required placeholder="Delivery Address *">
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-outline-danger btn-sm w-25" onclick="clearCart()">Clear</button>
+                                <button type="submit" class="btn btn-warning btn-sm fw-bold w-75">Place Order</button>
+                            </div>
+                        </form>
+                        <div id="order-msg" class="alert alert-success mt-3 mb-0 py-2 small d-none"></div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-warning text-center py-4 mt-5">
+        <p class="mb-0">&copy; 2026 The Golden Bean Restaurant &amp; Roastery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const cart = [];
+
+        function addToCart(name, price, qtyId) {
+            const qty = parseInt(document.getElementById(qtyId).value, 10) || 1;
+            const found = cart.find(i => i.name === name);
+            found ? found.qty += qty : cart.push({ name, price, qty });
+            renderCart();
+        }
+
+        function clearCart() {
+            cart.length = 0;
+            renderCart();
+        }
+
+        function renderCart() {
+            const list = document.getElementById('cart-list');
+            const badge = document.getElementById('cart-badge');
+            const totalEl = document.getElementById('cart-total');
+
+            if (!cart.length) {
+                list.innerHTML = '<li class="list-group-item text-muted text-center">Cart is empty</li>';
+                badge.textContent = '0 items';
+                totalEl.textContent = '$0.00';
+                return;
+            }
+
+            let sum = 0, count = 0;
+            list.innerHTML = cart.map(item => {
+                sum += item.price * item.qty;
+                count += item.qty;
+                return `<li class="list-group-item d-flex justify-content-between px-0">
+                            <span>${item.qty}x ${item.name}</span>
+                            <strong>$${(item.price * item.qty).toFixed(2)}</strong>
+                        </li>`;
+            }).join('');
+
+            badge.textContent = `${count} items`;
+            totalEl.textContent = `$${(sum + 2.50).toFixed(2)}`;
+        }
+
+        function placeOrder(e) {
+            e.preventDefault();
+            const msg = document.getElementById('order-msg');
+            if (!cart.length) return alert('Please add items to your cart first!');
+            msg.classList.remove('d-none');
+            msg.textContent = `Order confirmed for ${document.getElementById('custName').value}! Delivering to ${document.getElementById('custAddr').value} in 30 mins.`;
+            clearCart();
+            e.target.reset();
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
